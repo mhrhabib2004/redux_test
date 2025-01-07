@@ -1,11 +1,12 @@
 import { configureStore } from "@reduxjs/toolkit";
 import logger from "./middlewares/logger";
+import counterSlice from "./features/counterSlice"
 
 
 
 export const store = configureStore({
     reducer: {
-        // counter: counterSlice,
+        counter: counterSlice,
         // todo: taskReducer,
         // user: userReducer
     },
