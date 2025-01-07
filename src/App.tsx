@@ -1,12 +1,16 @@
 
+import { Outlet } from 'react-router-dom'
 import './App.css'
-import { Button } from './components/ui/button'
+import Navbar from './components/layout/Navber'
 
 function App() {
 
 
   return (
-   <div><Button>habib</Button></div>
+  <div>
+     <Navbar></Navbar>
+     <Outlet />
+  </div>
   )
 }
 
