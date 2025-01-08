@@ -15,6 +15,14 @@ const initialState : IinitialState = {
             isCompleted:false,
             priority: "High",
         },
+        {
+            id:"asdf",
+            title:"Initialize bakend",
+            description:"create Home page,and routing",
+            dueDate:"2025-01-09",
+            isCompleted:false,
+            priority: "High",
+        },
     
     ],
 }
