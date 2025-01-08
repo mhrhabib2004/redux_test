@@ -1,5 +1,6 @@
 import { selectTasks } from "@/redux/features/task/taskSlice"
 import { useAppSelector } from "@/redux/hooks"
+import TaskCard from "../module/task/taskCard"
 
 
 export default function Task() {
@@ -7,6 +8,8 @@ export default function Task() {
 
   console.log(tasks)
   return (
-    <div>task</div>
+    <div className="">
+
+    </div>
   )
 }
