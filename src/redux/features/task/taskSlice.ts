@@ -2,10 +2,10 @@ import { ITask } from "@/types";
 import { createSlice} from "@reduxjs/toolkit";
 
 interface IinitialState{
-    task:ITask[];
+    tasks:ITask[];
 }
 const initialState : IinitialState = {
-    task:[
+    tasks:[
         {
             id:"asdf",
             title:"Initialize frontend",
@@ -13,7 +13,7 @@ const initialState : IinitialState = {
             dueDate:"2025-01-09",
             isCompleted:false,
             priority: "High",
-        }
+        },
     
     ],
 }
