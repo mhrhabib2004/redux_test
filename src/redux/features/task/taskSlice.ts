@@ -21,7 +21,7 @@ const initialState : IinitialState = {
             description:"create Home page,and routing",
             dueDate:"2025-01-09",
             isCompleted:false,
-            priority: "High",
+            priority: "Low",
         },
     
     ],
@@ -29,7 +29,9 @@ const initialState : IinitialState = {
 const taskSlice = createSlice({
     name:"task",
     initialState,
-    reducers:{},
+    reducers:{
+
+    },
 });
 
 export const selectTasks = (state : RootState)=>{
