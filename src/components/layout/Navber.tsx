@@ -15,15 +15,9 @@ const Navbar = () => {
                 <ModeToggle />
             </div>
 
-        </nav>
+        </nav> 
     );
 };
 
 export default Navbar;
 
-
-// export default function Navber() {
-//   return (
-//     <div>Navber</div>
-//   )
-// }
