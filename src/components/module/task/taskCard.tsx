@@ -13,7 +13,7 @@ export default function TaskCard({task }: IProps) {
             <div className="flex gap-2 items-center">
 
                 <div className="size-3 rounded-full bg-green-500"></div>
-                <h1>task</h1>
+                <h1>{task.title}</h1>
 
             </div>
             <div className="flex gap-3 items-center">
@@ -26,7 +26,7 @@ export default function TaskCard({task }: IProps) {
             </div>
 
         </div>
-        <p className="mt-5">drescription</p>
+        <p className="mt-5">{task.description}</p>
     </div>
   )
 }
