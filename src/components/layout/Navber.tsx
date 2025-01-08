@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ModeToggle } from "../mode-toggle";
+import { ModeToggle } from "../../provaider/mode-toggle";
 
 const Navbar = () => {
     return (
