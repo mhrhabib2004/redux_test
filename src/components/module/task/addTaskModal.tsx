@@ -7,10 +7,11 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog"
-import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
+import { FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form"
+import { Form, useForm } from "react-hook-form"
 
 export function AddTaskModal() {
+  const from = useForm()
   return (
     <Dialog>
       <DialogTrigger asChild>
@@ -20,23 +21,24 @@ export function AddTaskModal() {
         <DialogHeader>
           <DialogTitle>Add Task</DialogTitle>
         </DialogHeader>
-        <div className="grid gap-4 py-4">
-          <div className="grid grid-cols-4 items-center gap-4">
-            <Label htmlFor="name" className="text-right">
-              Name
-            </Label>
-            <Input id="name" value="Pedro Duarte" className="col-span-3" />
-          </div>
-          <div className="grid grid-cols-4 items-center gap-4">
-            <Label htmlFor="username" className="text-right">
-              Username
-            </Label>
-            <Input id="username" value="@peduarte" className="col-span-3" />
-          </div>
-        </div>
+        <Form {...from}>
+        <FormField
+    control={from.control}
+    name="titel"
+    render={() => (
+      <FormItem>
+        <FormLabel />
+        <FormControl>
+          { /* Your form field */}
+        </FormControl>
+        <FormMessage />
+      </FormItem>
+    )}
+  />
         <DialogFooter>
           <Button type="submit">Save changes</Button>
         </DialogFooter>
+        </Form>
       </DialogContent>
     </Dialog>
   )
