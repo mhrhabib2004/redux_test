@@ -13,7 +13,7 @@ import { Form, useForm } from "react-hook-form"
 
 export function AddTaskModal() {
   const form = useForm();
-  const onSubmit = (data)=>{
+  const onsubmit = (data)=>{
     console.log(data)
   }
   return (
@@ -26,9 +26,9 @@ export function AddTaskModal() {
           <DialogTitle>Add Task</DialogTitle>
         </DialogHeader>
         <Form {...form}>
-       <form onSubmit={form.handleSubmit(onSubmit)}>
+       <form onSubmit={form.handleSubmit(onsubmit)}>
        <FormField
-    control={form.control}
+    control={form?.control}
     name="titel"
     render={() => (
       <FormItem>
@@ -40,10 +40,11 @@ export function AddTaskModal() {
       </FormItem>
     )}
   />
-       </form>
-        <DialogFooter>
+   <DialogFooter>
           <Button type="submit">Save changes</Button>
         </DialogFooter>
+       </form>
+       
         </Form>
       </DialogContent>
     </Dialog>
