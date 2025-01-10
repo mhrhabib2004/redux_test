@@ -15,6 +15,7 @@ import {
   FormLabel
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
 import { useForm } from "react-hook-form";
 
 // Define form data type
@@ -62,7 +63,7 @@ export function AddTaskModal() {
               <FormItem>
                 <FormLabel>Drescription</FormLabel>
                 <FormControl>
-                  <Input placeholder="Enter task drescription" {...field} value={field.value || ""}/>
+                  <Textarea placeholder="Enter task drescription" {...field} value={field.value || ""}/>
                 </FormControl>
               </FormItem>
             )}
