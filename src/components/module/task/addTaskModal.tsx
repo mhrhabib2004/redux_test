@@ -20,6 +20,8 @@ import { useForm } from "react-hook-form";
 // Define form data type
 interface TaskFormData {
   title: string;
+  drescription : string;
+  
 }
 
 export function AddTaskModal() {
@@ -48,7 +50,31 @@ export function AddTaskModal() {
               <FormItem>
                 <FormLabel>Task Title</FormLabel>
                 <FormControl>
-                  <Input placeholder="Enter task title" {...field} />
+                  <Input placeholder="Enter task title" {...field} value={field.value || ""}/>
+                </FormControl>
+              </FormItem>
+            )}
+          />
+          <FormField
+            control={form.control}
+            name="drescription" // Corrected name from "titel" to "title"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>Drescription</FormLabel>
+                <FormControl>
+                  <Input placeholder="Enter task drescription" {...field} value={field.value || ""}/>
+                </FormControl>
+              </FormItem>
+            )}
+          />
+          <FormField
+            control={form.control}
+            name="title" // Corrected name from "titel" to "title"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>Task Title</FormLabel>
+                <FormControl>
+                  <Input placeholder="Enter task title" {...field} value={field.value || ""}/>
                 </FormControl>
               </FormItem>
             )}
