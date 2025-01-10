@@ -51,7 +51,6 @@ export function AddTaskModal() {
                 <FormControl>
                   <Input placeholder="Enter task title" {...field} />
                 </FormControl>
-                <FormMessage />
               </FormItem>
             )}
           />
