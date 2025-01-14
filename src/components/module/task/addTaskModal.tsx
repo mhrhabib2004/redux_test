@@ -15,8 +15,10 @@ import {
   FormLabel
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Textarea } from "@/components/ui/textarea";
 import { useForm } from "react-hook-form";
+
 
 // Define form data type
 interface TaskFormData {
@@ -68,18 +70,29 @@ export function AddTaskModal() {
               </FormItem>
             )}
           />
-          <FormField
-            control={form.control}
-            name="title" // Corrected name from "titel" to "title"
-            render={({ field }) => (
-              <FormItem>
-                <FormLabel>Task Title</FormLabel>
+        <FormField
+          control={form.control}
+          name="priority"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Email</FormLabel>
+              <Select onValueChange={field.onChange} defaultValue={field.value}>
                 <FormControl>
-                  <Input placeholder="Enter task title" {...field} value={field.value || ""}/>
+                  <SelectTrigger>
+                    <SelectValue placeholder="Select a verified email to display" />
+                  </SelectTrigger>
                 </FormControl>
-              </FormItem>
-            )}
-          />
+                <SelectContent>
+                  <SelectItem value="m@example.com">m@example.com</SelectItem>
+                  <SelectItem value="m@google.com">m@google.com</SelectItem>
+                  <SelectItem value="m@support.com">m@support.com</SelectItem>
+                </SelectContent>
+              </Select>
+           
+             
+            </FormItem>
+          )}
+        />
           <DialogFooter>
             <Button type="submit">Save Task</Button>
           </DialogFooter>
