@@ -23,6 +23,9 @@ import { useForm } from "react-hook-form";
 import { CalendarIcon } from "lucide-react"
 import { format } from "date-fns"
 import { cn } from "@/lib/utils";
+import { useDispatch } from "react-redux";
+import { addTask } from "@/redux/features/task/taskSlice";
+import { ITask } from "@/types";
 
 // Define form data type
 interface TaskFormData {
@@ -34,8 +37,11 @@ interface TaskFormData {
 export function AddTaskModal() {
   const form = useForm<TaskFormData>();
 
-  const onSubmit = (data: TaskFormData) => {
+  const dispatch = useDispatch();
+
+  const onSubmit = (data: ITask) => {
     console.log(data);
+    dispatch(addTask(data))
   };
 
   return (
