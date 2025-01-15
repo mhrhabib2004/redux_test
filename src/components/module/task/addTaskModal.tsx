@@ -101,7 +101,7 @@ export function AddTaskModal() {
           control={form.control}
           name="date"
           render={({ field }) => (
-            <FormItem className="flex flex-col">
+            <FormItem className="flex mt-1 flex-col">
               <FormLabel>Date of birth</FormLabel>
               <Popover>
                 <PopoverTrigger asChild>
@@ -109,7 +109,7 @@ export function AddTaskModal() {
                     <Button
                       variant={"outline"}
                       className={cn(
-                        "w-[240px] pl-3 text-left font-normal",
+                        "w-auto pl-3 text-left font-normal",
                         !field.value && "text-muted-foreground"
                       )}
                     >
@@ -138,7 +138,7 @@ export function AddTaskModal() {
           )}
         />
           <DialogFooter>
-            <Button type="submit">Save Task</Button>
+            <Button className="mt-2" type="submit">Save Task</Button>
           </DialogFooter>
         </form>
         </Form>
