@@ -19,7 +19,7 @@ import { Input } from "@/components/ui/input";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Textarea } from "@/components/ui/textarea";
-import { useForm } from "react-hook-form";
+import { FieldValues, SubmitHandler, useForm } from "react-hook-form";
 import { CalendarIcon } from "lucide-react"
 import { format } from "date-fns"
 import { cn } from "@/lib/utils";
@@ -39,9 +39,9 @@ export function AddTaskModal() {
 
   const dispatch = useDispatch();
 
-  const onSubmit = (data: ITask) => {
+  const onSubmit: SubmitHandler<FieldValues> = (data) => {
     console.log(data);
-    dispatch(addTask(data))
+    dispatch(addTask(data as ITask))
   };
 
   return (
@@ -70,7 +70,7 @@ export function AddTaskModal() {
           />
           <FormField
             control={form.control}
-            name="drescription" // Corrected name from "titel" to "title"
+            name="description" 
             render={({ field }) => (
               <FormItem>
                 <FormLabel>Drescription</FormLabel>
