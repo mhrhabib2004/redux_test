@@ -1,13 +1,22 @@
 import { RootState } from "@/redux/store";
 import { ITask } from "@/types";
 import { createSlice, nanoid, PayloadAction} from "@reduxjs/toolkit";
-import { v4 as uuidv4 } from 'uuid';
+
 
 interface IinitialState{
     tasks:ITask[];
 }
 const initialState : IinitialState = {
-    tasks:[],
+    tasks:[
+        {
+        id:"R3GJo-fJg1XW25V92l-SG",
+        isCompleted:false,
+        title:"hfhsdk;afjk;djf",
+        description:"dfdpfdik[dkfdvljkdojfdvnakjgkjjdf",
+        priority:"Medium",
+        dueDate:"2025-01-27T18:00:00.000Z"
+                }
+    ],
 }
 type DarftTask = Pick<ITask,"title"|"description"|"dueDate" | "priority">;
 const createTask = (taskData : DarftTask):ITask =>{
