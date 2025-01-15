@@ -102,7 +102,7 @@ export function AddTaskModal() {
           name="date"
           render={({ field }) => (
             <FormItem className="flex mt-1 flex-col">
-              <FormLabel>Date of birth</FormLabel>
+              <FormLabel>Due Date</FormLabel>
               <Popover>
                 <PopoverTrigger asChild>
                   <FormControl>
@@ -127,9 +127,9 @@ export function AddTaskModal() {
                     mode="single"
                     selected={field.value}
                     onSelect={field.onChange}
-                    disabled={(date) =>
-                      date > new Date() || date < new Date("1900-01-01")
-                    }
+                    // disabled={(date) =>
+                    //   date > new Date() || date < new Date("1900-01-01")
+                    // }
                     initialFocus
                   />
                 </PopoverContent>
