@@ -99,7 +99,7 @@ export function AddTaskModal() {
         />
           <FormField
           control={form.control}
-          name="date"
+          name="duedate"
           render={({ field }) => (
             <FormItem className="flex mt-1 flex-col">
               <FormLabel>Due Date</FormLabel>
