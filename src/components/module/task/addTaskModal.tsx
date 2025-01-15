@@ -30,7 +30,10 @@ import { ITask } from "@/types";
 // Define form data type
 interface TaskFormData {
   title: string;
-  drescription : string;
+  description : string;
+  priority: string;
+  duedate:string;
+
   
 }
 
